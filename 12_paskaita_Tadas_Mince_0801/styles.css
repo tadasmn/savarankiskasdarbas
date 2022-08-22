@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+}
+.wrapper {
+  max-width: 1400px;
+  min-width: 300px;
+  margin: auto;
+}
+nav {
+  display:flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom:40px;
+}
+.flowerLogo{
+  width: 70px;
+  height: 70px;
+}
+.navlist {
+  display: flex;
+  list-style-type: none;
+  gap: 15px;
+}
+li a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: smaller;
+}
+main {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.user {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom:30px;
+}
+.userPhoto {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+p {
+  line-height: 1.5;
+}
+.flowerBanner {
+  border:1px lightgrey solid;
+  margin-top: 30px;
+  object-fit: cover;
+  width: 100%;
+  height: 130px;
+}
+.gallery {
+  padding-bottom: 50px;
+  margin-top: 110px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+text {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  color: white;
+  font-size: larger;
+}
+.photo1 {
+  border:1px lightgrey solid;
+  background-image: url("./assets/1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 250px;
+  height: 150px;
+  position: relative;
+  text-align: center;
+}
+.photo2 {
+  border:1px lightgrey solid;
+  background-image: url("./assets/2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 250px;
+  height: 150px;
+  position: relative;
+  text-align: center;
+}
+.photo3 {
+  border:1px lightgrey solid;
+  background-image: url("./assets/3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 250px;
+  height: 150px;
+  position: relative;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px){
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    gap:20px;
+  }
+  .photo1 {
+    margin:auto;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:1;
+    grid-column-end:2;
+  }
+  .photo2 {
+    margin:auto;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
+  }
+  .photo3 {
+    margin:auto;
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:3;
+  }
+}
+@media only screen and (max-width: 768px){
+  nav {
+    justify-content: center;
+  }
+  p {
+    text-align: center;
+  }
+  .user {
+    flex-direction: column;
+  }
+  .navlist {
+    display:none;
+  }
+  .gallery {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+  }
+}
